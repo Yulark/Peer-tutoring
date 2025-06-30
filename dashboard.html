@@ -1,0 +1,453 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PeerConnect Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="dashboard" data-theme="light">
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="nav-brand">
+        <i class="fas fa-graduation-cap"></i>
+        <span>PeerConnect</span>
+      </div>
+      <div class="nav-controls">
+        <button id="theme-toggle" class="theme-toggle">
+          <i class="fas fa-moon"></i>
+        </button>
+        <button id="logout-btn" class="logout-btn">
+          <i class="fas fa-sign-out-alt"></i>
+          Logout
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero-section">
+    <div class="hero-content">
+      <h1 class="hero-title">Welcome to PeerConnect</h1>
+      <p class="hero-subtitle">Connect. Learn. Grow together.</p>
+      <div class="hero-stats">
+        <div class="stat-item">
+          <span class="stat-number">2.5K+</span>
+          <span class="stat-label">Active Tutors</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">15K+</span>
+          <span class="stat-label">Students</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">98%</span>
+          <span class="stat-label">Success Rate</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Quick Actions -->
+  <section class="quick-actions">
+    <div class="container">
+      <h2>Quick Actions</h2>
+      <div class="action-grid">
+        <div class="action-card" data-action="find-tutor">
+          <i class="fas fa-search"></i>
+          <h3>Find a Tutor</h3>
+          <p>Browse and connect with expert tutors</p>
+        </div>
+        <div class="action-card" data-action="become-tutor">
+          <i class="fas fa-chalkboard-teacher"></i>
+          <h3>Become a Tutor</h3>
+          <p>Share your knowledge and earn</p>
+        </div>
+        <div class="action-card" data-action="my-sessions">
+          <i class="fas fa-calendar-alt"></i>
+          <h3>My Sessions</h3>
+          <p>View upcoming and past sessions</p>
+        </div>
+        <div class="action-card" data-action="leaderboard">
+          <i class="fas fa-trophy"></i>
+          <h3>Leaderboard</h3>
+          <p>See top performers this month</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="features-section">
+    <div class="container">
+      <div class="feature-showcase">
+        <div class="feature-image">
+          <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=600&h=400&fit=crop" alt="Students collaborating" />
+        </div>
+        <div class="feature-content">
+          <h2>Collaborative Learning Redefined</h2>
+          <p>Experience the future of peer-to-peer education with our innovative platform that connects students worldwide.</p>
+          <div class="feature-highlights">
+            <div class="highlight-item">
+              <i class="fas fa-shield-alt"></i>
+              <span>Secure & Private</span>
+            </div>
+            <div class="highlight-item">
+              <i class="fas fa-globe"></i>
+              <span>Global Community</span>
+            </div>
+            <div class="highlight-item">
+              <i class="fas fa-clock"></i>
+              <span>24/7 Availability</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tutor/Student Marketplace -->
+  <section class="marketplace-section">
+    <div class="container">
+      <h2>Tutor & Student Marketplace</h2>
+      <div class="marketplace-tabs">
+        <button class="tab-btn active" data-tab="tutors">
+          <i class="fas fa-chalkboard-teacher"></i>
+          Available Tutors
+        </button>
+        <button class="tab-btn" data-tab="students">
+          <i class="fas fa-user-graduate"></i>
+          Students Seeking Help
+        </button>
+      </div>
+
+      <!-- Tutors Tab -->
+      <div id="tutors-tab" class="marketplace-content active">
+        <div class="marketplace-grid">
+          <div class="marketplace-card tutor-card">
+            <div class="card-header">
+              <div class="profile-info">
+                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face" alt="Tutor" class="profile-image">
+                <div class="profile-details">
+                  <h3>Kwame Asante</h3>
+                  <p class="subject">Calculus III & Linear Algebra</p>
+                  <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <span>4.9 (127 reviews)</span>
+                  </div>
+                </div>
+              </div>
+              <div class="price-tag">₵45/hr</div>
+            </div>
+            <p class="description">Mathematics PhD student specializing in advanced calculus and linear algebra. 3+ years tutoring experience.</p>
+            <div class="card-footer">
+              <div class="availability">
+                <i class="fas fa-clock"></i>
+                <span>Available Now</span>
+              </div>
+              <button class="connect-btn">
+                <i class="fas fa-message"></i>
+                Connect
+              </button>
+            </div>
+          </div>
+
+          <div class="marketplace-card tutor-card">
+            <div class="card-header">
+              <div class="profile-info">
+                <img src="https://images.unsplash.com/photo-1494790108755-2616b612b647?w=100&h=100&fit=crop&crop=face" alt="Tutor" class="profile-image">
+                <div class="profile-details">
+                  <h3>Ama Osei</h3>
+                  <p class="subject">Organic Chemistry</p>
+                  <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <span>5.0 (89 reviews)</span>
+                  </div>
+                </div>
+              </div>
+              <div class="price-tag">₵38/hr</div>
+            </div>
+            <p class="description">Chemistry major with expertise in organic reactions and mechanisms. Patient and thorough teaching style.</p>
+            <div class="card-footer">
+              <div class="availability">
+                <i class="fas fa-clock"></i>
+                <span>Next: 2:00 PM</span>
+              </div>
+              <button class="connect-btn">
+                <i class="fas fa-message"></i>
+                Connect
+              </button>
+            </div>
+          </div>
+
+          <div class="marketplace-card tutor-card">
+            <div class="card-header">
+              <div class="profile-info">
+                <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face" alt="Tutor" class="profile-image">
+                <div class="profile-details">
+                  <h3>Kofi Mensah</h3>
+                  <p class="subject">Data Structures & Algorithms</p>
+                  <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                    <span>4.7 (156 reviews)</span>
+                  </div>
+                </div>
+              </div>
+              <div class="price-tag">₵50/hr</div>
+            </div>
+            <p class="description">Computer Science graduate with industry experience. Specializes in coding interviews and algorithm optimization.</p>
+            <div class="card-footer">
+              <div class="availability">
+                <i class="fas fa-clock"></i>
+                <span>Available Now</span>
+              </div>
+              <button class="connect-btn">
+                <i class="fas fa-message"></i>
+                Connect
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Students Tab -->
+      <div id="students-tab" class="marketplace-content">
+        <div class="marketplace-grid">
+          <div class="marketplace-card student-card">
+            <div class="card-header">
+              <div class="profile-info">
+                <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop&crop=face" alt="Student" class="profile-image">
+                <div class="profile-details">
+                  <h3>Akosua Darko</h3>
+                  <p class="subject">Needs help with Quantum Physics</p>
+                  <div class="urgency urgent">
+                    <i class="fas fa-exclamation-circle"></i>
+                    <span>Urgent - Exam in 3 days</span>
+                  </div>
+                </div>
+              </div>
+              <div class="budget-tag">Budget: ₵40/hr</div>
+            </div>
+            <p class="description">Struggling with wave-particle duality and quantum mechanics. Need focused help before midterm exam.</p>
+            <div class="card-footer">
+              <div class="deadline">
+                <i class="fas fa-calendar-alt"></i>
+                <span>Deadline: Dec 15</span>
+              </div>
+              <button class="help-btn">
+                <i class="fas fa-hand-holding-heart"></i>
+                Offer Help
+              </button>
+            </div>
+          </div>
+
+          <div class="marketplace-card student-card">
+            <div class="card-header">
+              <div class="profile-info">
+                <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&h=100&fit=crop&crop=face" alt="Student" class="profile-image">
+                <div class="profile-details">
+                  <h3>Yaw Boateng</h3>
+                  <p class="subject">Statistics & Biostatistics</p>
+                  <div class="urgency normal">
+                    <i class="fas fa-info-circle"></i>
+                    <span>Regular sessions needed</span>
+                  </div>
+                </div>
+              </div>
+              <div class="budget-tag">Budget: ₵35/hr</div>
+            </div>
+            <p class="description">Looking for ongoing help with statistical analysis and hypothesis testing for research project.</p>
+            <div class="card-footer">
+              <div class="deadline">
+                <i class="fas fa-calendar-alt"></i>
+                <span>Flexible schedule</span>
+              </div>
+              <button class="help-btn">
+                <i class="fas fa-hand-holding-heart"></i>
+                Offer Help
+              </button>
+            </div>
+          </div>
+
+          <div class="marketplace-card student-card">
+            <div class="card-header">
+              <div class="profile-info">
+                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&h=100&fit=crop&crop=face" alt="Student" class="profile-image">
+                <div class="profile-details">
+                  <h3>Efua Adjei</h3>
+                  <p class="subject">Advanced Calculus</p>
+                  <div class="urgency normal">
+                    <i class="fas fa-info-circle"></i>
+                    <span>Project assistance</span>
+                  </div>
+                </div>
+              </div>
+              <div class="budget-tag">Budget: ₵42/hr</div>
+            </div>
+            <p class="description">Need help understanding multivariable calculus concepts for engineering applications.</p>
+            <div class="card-footer">
+              <div class="deadline">
+                <i class="fas fa-calendar-alt"></i>
+                <span>Due: Jan 20</span>
+              </div>
+              <button class="help-btn">
+                <i class="fas fa-hand-holding-heart"></i>
+                Offer Help
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- University STEM Courses -->
+  <section class="grading-section">
+    <div class="container">
+      <h2>University STEM Performance</h2>
+      <div class="grade-cards">
+        <div class="grade-card">
+          <div class="grade-header">
+            <h3>Calculus III</h3>
+            <span class="grade-badge grade-a">A+</span>
+          </div>
+          <div class="progress-bar">
+            <div class="progress-fill" style="width: 95%"></div>
+          </div>
+          <p>Multivariable calculus mastery!</p>
+        </div>
+        <div class="grade-card">
+          <div class="grade-header">
+            <h3>Organic Chemistry</h3>
+            <span class="grade-badge grade-b">B+</span>
+          </div>
+          <div class="progress-bar">
+            <div class="progress-fill" style="width: 82%"></div>
+          </div>
+          <p>Complex mechanisms improving.</p>
+        </div>
+        <div class="grade-card">
+          <div class="grade-header">
+            <h3>Data Structures</h3>
+            <span class="grade-badge grade-a">A</span>
+          </div>
+          <div class="progress-bar">
+            <div class="progress-fill" style="width: 90%"></div>
+          </div>
+          <p>Algorithm optimization excellent!</p>
+        </div>
+        <div class="grade-card">
+          <div class="grade-header">
+            <h3>Quantum Physics</h3>
+            <span class="grade-badge grade-a">A-</span>
+          </div>
+          <div class="progress-bar">
+            <div class="progress-fill" style="width: 88%"></div>
+          </div>
+          <p>Wave mechanics understanding solid.</p>
+        </div>
+        <div class="grade-card">
+          <div class="grade-header">
+            <h3>Linear Algebra</h3>
+            <span class="grade-badge grade-a">A+</span>
+          </div>
+          <div class="progress-bar">
+            <div class="progress-fill" style="width: 96%"></div>
+          </div>
+          <p>Matrix operations mastered!</p>
+        </div>
+        <div class="grade-card">
+          <div class="grade-header">
+            <h3>Biostatistics</h3>
+            <span class="grade-badge grade-b">B+</span>
+          </div>
+          <div class="progress-bar">
+            <div class="progress-fill" style="width: 84%"></div>
+          </div>
+          <p>Statistical analysis improving.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="about-section" id="about">
+    <div class="container">
+      <button class="about-toggle" id="about-toggle">
+        <span>About PeerConnect</span>
+        <i class="fas fa-chevron-down"></i>
+      </button>
+      <div class="about-content" id="about-content">
+        <div class="about-grid">
+          <div class="about-item">
+            <i class="fas fa-users"></i>
+            <h3>Peer-to-Peer Learning</h3>
+            <p>Connect with fellow students who excel in subjects you're struggling with, creating a collaborative learning environment.</p>
+          </div>
+          <div class="about-item">
+            <i class="fas fa-star"></i>
+            <h3>Quality Assurance</h3>
+            <p>Our rating system ensures you connect with the best tutors, with continuous feedback and improvement mechanisms.</p>
+          </div>
+          <div class="about-item">
+            <i class="fas fa-lock"></i>
+            <h3>Decentralized & Secure</h3>
+            <p>Built on decentralized infrastructure to ensure your privacy and data security while maintaining platform reliability.</p>
+          </div>
+          <div class="about-item">
+            <i class="fas fa-mobile-alt"></i>
+            <h3>Cross-Platform</h3>
+            <p>Access PeerConnect from any device - desktop, tablet, or mobile. Learn anywhere, anytime.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Social Media Section -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <i class="fas fa-graduation-cap"></i>
+          <span>PeerConnect</span>
+        </div>
+        <div class="social-links">
+          <a href="https://instagram.com" target="_blank" class="social-link instagram">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://twitter.com" target="_blank" class="social-link twitter">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a href="https://github.com" target="_blank" class="social-link github">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="https://linkedin.com" target="_blank" class="social-link linkedin">
+            <i class="fab fa-linkedin"></i>
+          </a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 PeerConnect. Empowering students worldwide.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="dashboard.js"></script>
+</body>
+</html>
